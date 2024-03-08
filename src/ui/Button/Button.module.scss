@@ -1,0 +1,43 @@
+.Button {
+  padding: 14px 30px;
+  background-color: $dark-gray;
+  color: $white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s background-color;
+  border: 0;
+
+  @include breakpoint(tablet) {
+    padding: 10px 20px;
+    font-size: $font-sm;
+  }
+}
+
+.Button:hover {
+  background-color: lighten($color: $dark-gray, $amount: 10);
+}
+
+.submit {
+  width: 100%;
+}
+
+.outlined {
+  background-color: transparent;
+  border: 2px solid $dark-gray;
+  color: $dark-gray;
+}
+
+.outlined:hover {
+  background-color: $light-gray;
+}
+
+.light {
+  background-color: $light-gray;
+  color: $black;
+  font-weight: 500;
+}
+
+.light:hover {
+  background-color: $dark-gray;
+  color: $white;
+}

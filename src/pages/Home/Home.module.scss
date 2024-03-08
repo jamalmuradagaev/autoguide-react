@@ -1,0 +1,448 @@
+h2 {
+  font-size: $font-xl-title;
+  font-weight: $font-semibold;
+  text-align: center;
+
+  @include breakpoint(laptop) {
+    font-size: $font-lg-title;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: $font-md-title;
+  }
+
+  @include breakpoint(mobile-wide) {
+    font-size: $font-sm-title;
+  }
+  // @include breakpoint(mobile-narrow) {
+  //   font-size: $font-xxl;
+  // }
+}
+
+// intro
+
+.intro {
+  height: 100vh;
+  background-image: url("../../assets/mainPage/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.introInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white;
+
+  h1 {
+    font-size: 120px;
+    font-weight: $font-semibold;
+  }
+
+  i {
+    display: block;
+    font-size: $font-md-title;
+    margin-top: 100px;
+    font-weight: $font-normal;
+  }
+
+  @include breakpoint(laptop) {
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    h1 {
+      font-size: 80px;
+    }
+
+    i {
+      margin-top: 50px;
+      font-size: $font-sm-title;
+    }
+  }
+
+  @include breakpoint(mobile-narrow) {
+    h1 {
+      font-size: $font-xl-title;
+    }
+
+    i {
+      margin-top: 50px;
+      font-size: $font-xxl;
+    }
+  }
+}
+
+// welcome
+
+.welcome {
+  margin-top: 80px;
+  padding: 80px 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    background: $black;
+    position: absolute;
+    width: 20%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 50px 0;
+  }
+
+  @include breakpoint(mobile-narrow) {
+    &::before,
+    &::after {
+      width: 30%;
+    }
+  }
+}
+
+.welcomeInner {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 1040px;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: $font-xl-title;
+    width: 45%;
+    text-align: start;
+  }
+
+  p {
+    font-size: $font-xxl;
+    width: 45%;
+    font-weight: $font-light;
+  }
+
+  @include breakpoint(laptop) {
+    h2 {
+      font-size: $font-md-title;
+    }
+    p {
+      font-size: $font-xl;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    p {
+      font-size: $font-lg;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      text-align: center;
+      width: 80%;
+    }
+
+    p {
+      width: 80%;
+      margin-top: 40px;
+    }
+  }
+
+  // @include breakpoint(mobile-narrow) {
+  //   p {
+  //     font-size: $font-sm;
+  //   }
+  // }
+}
+
+.reasons {
+  margin-top: 150px;
+}
+
+.reasonsList {
+  background-image: url("../../assets/mainPage/reasons-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0;
+  margin-top: 80px;
+
+  @include breakpoint(laptop) {
+    h2 {
+      font-size: $font-lg-title;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    font-size: $font-md-title;
+  }
+
+  @include breakpoint(mobile-wide) {
+    font-size: $font-sm-title;
+  }
+  @include breakpoint(mobile-narrow) {
+    font-size: $font-xxl;
+  }
+}
+
+.reasonsListItem {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+}
+
+.FAQ {
+  margin-top: 150px;
+}
+
+.quesList {
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.landmarks {
+  margin-top: 150px;
+
+  h2 {
+    text-align: start;
+    width: 50%;
+  }
+
+  @include breakpoint(mobile-narrow) {
+    h2 {
+      font-size: $font-xxl;
+    }
+  }
+
+  @include breakpoint(320) {
+    h2 {
+      font-size: $font-xl;
+    }
+  }
+}
+
+.showAllLink {
+  display: block;
+  text-align: end;
+  color: $gray;
+}
+
+.landmarksInner {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.aboutUs {
+  margin-top: 150px;
+
+  h2 {
+    text-align: start;
+  }
+}
+
+.aboutUsInner {
+  margin-top: 50px;
+}
+
+.aboutUsText {
+  font-size: $font-xxl;
+  font-weight: $font-light;
+  p {
+    line-height: 1.3;
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    font-size: $font-xl;
+  }
+
+  @include breakpoint(mobile-wide) {
+    font-size: $font-lg;
+    font-weight: $font-normal;
+  }
+}
+
+.aboutUsCards {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+
+  @include breakpoint(laptop) {
+    gap: 70px;
+  }
+
+  @include breakpoint(tablet) {
+    gap: 50px;
+  }
+
+  @include breakpoint(mobile-wide) {
+    gap: 30px;
+  }
+
+  div {
+    max-width: 400px;
+    padding: 45px 40px;
+    min-height: 400px;
+
+    h4 {
+      font-size: $font-sm-title;
+      font-weight: $font-semibold;
+      margin-top: 45px;
+    }
+
+    p {
+      max-width: 370px;
+      margin-top: 40px;
+      font-size: $font-xl;
+      line-height: 1.4;
+    }
+    @include breakpoint(mobile-narrow) {
+      h4 {
+        margin-top: 30px;
+        font-size: $font-xxl;
+      }
+    }
+  }
+}
+
+.mobileApp {
+  margin-top: 150px;
+  background-image: url("../../assets/mainPage/mountain.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mobileAppInner {
+  margin-top: 130px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    // max-width: 620px;
+    width: 60%;
+    font-size: $font-sm-title;
+    line-height: 1.4;
+    font-weight: $font-light;
+  }
+  @include breakpoint(laptop) {
+    p {
+      font-size: $font-xxl;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    p {
+      width: 100%;
+      font-size: $font-xl;
+    }
+  }
+}
+
+.mobileImg {
+  max-width: 400px;
+
+  img {
+    width: 100%;
+  }
+
+  @include breakpoint(laptop) {
+    max-width: 300px;
+  }
+
+  @include breakpoint(tablet) {
+    margin-top: 50px;
+  }
+}
+
+.team {
+  margin-top: 150px;
+
+  p {
+    margin: 60px 0;
+    text-align: center;
+    font-size: $font-sm-title;
+    font-weight: $font-light;
+  }
+
+  @include breakpoint(tablet) {
+    p {
+      font-size: $font-xxl;
+      margin: 40px 0;
+    }
+  }
+
+  @include breakpoint(mobile-wide){
+    p{
+      font-size: $font-xl;
+    }
+  }
+}
+
+.teamMatesList {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+
+    h3 {
+      font-weight: $font-bold;
+      font-size: $font-lg;
+    }
+
+    ul {
+      margin-top: 18px;
+    }
+  }
+}

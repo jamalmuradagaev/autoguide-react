@@ -1,0 +1,29 @@
+.LandmarkMiniCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  box-shadow: $box-shadow;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.imgWrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 8px 18px 40px;
+
+  h4 {
+    font-size: $font-xxl;
+    font-weight: $font-semibold;
+  }
+}
+
+.options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}

@@ -1,0 +1,11 @@
+.Content{
+    padding-top: 180px;
+
+    @include breakpoint(tablet){
+        padding-top: 150px;
+    }
+
+    @include breakpoint (mobile-wide){
+        padding-top: 120px;
+    }
+}
